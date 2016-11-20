@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		BF55E6771DE164E700B0180F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF55E6761DE164E700B0180F /* main.cpp */; };
+		BF55E6811DE1665E00B0180F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF55E6801DE1665E00B0180F /* Cocoa.framework */; };
+		BF55E6871DE16A1B00B0180F /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF55E6861DE16A1B00B0180F /* SDL2.framework */; };
+		BF55E68A1DE1701C00B0180F /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF55E6891DE1701C00B0180F /* OpenGL.framework */; };
+		BF55E68E1DE1712300B0180F /* mainGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF55E68C1DE1712300B0180F /* mainGame.cpp */; };
+		BF55E6961DE2164B00B0180F /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF55E6951DE2164B00B0180F /* SDL2_image.framework */; };
+		BF55E6981DE2166200B0180F /* SDL2_mixer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF55E6971DE2166200B0180F /* SDL2_mixer.framework */; };
+		BF55E69A1DE2168600B0180F /* SDL2_net.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF55E6991DE2168600B0180F /* SDL2_net.framework */; };
+		BF55E69C1DE2169700B0180F /* SDL2_ttf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF55E69B1DE2169700B0180F /* SDL2_ttf.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +33,16 @@
 /* Begin PBXFileReference section */
 		BF55E6731DE164E700B0180F /* trySDL */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = trySDL; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF55E6761DE164E700B0180F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		BF55E6801DE1665E00B0180F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		BF55E6861DE16A1B00B0180F /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
+		BF55E6891DE1701C00B0180F /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		BF55E68C1DE1712300B0180F /* mainGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mainGame.cpp; sourceTree = "<group>"; };
+		BF55E68D1DE1712300B0180F /* mainGame.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = mainGame.hpp; sourceTree = "<group>"; };
+		BF55E6941DE1872600B0180F /* batman.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = batman.bmp; sourceTree = "<group>"; };
+		BF55E6951DE2164B00B0180F /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ../../../../Library/Frameworks/SDL2_image.framework; sourceTree = "<group>"; };
+		BF55E6971DE2166200B0180F /* SDL2_mixer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_mixer.framework; path = ../../../../Library/Frameworks/SDL2_mixer.framework; sourceTree = "<group>"; };
+		BF55E6991DE2168600B0180F /* SDL2_net.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_net.framework; path = ../../../../Library/Frameworks/SDL2_net.framework; sourceTree = "<group>"; };
+		BF55E69B1DE2169700B0180F /* SDL2_ttf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_ttf.framework; path = ../../../../Library/Frameworks/SDL2_ttf.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +50,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF55E69C1DE2169700B0180F /* SDL2_ttf.framework in Frameworks */,
+				BF55E69A1DE2168600B0180F /* SDL2_net.framework in Frameworks */,
+				BF55E6981DE2166200B0180F /* SDL2_mixer.framework in Frameworks */,
+				BF55E6961DE2164B00B0180F /* SDL2_image.framework in Frameworks */,
+				BF55E68A1DE1701C00B0180F /* OpenGL.framework in Frameworks */,
+				BF55E6871DE16A1B00B0180F /* SDL2.framework in Frameworks */,
+				BF55E6811DE1665E00B0180F /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,8 +66,12 @@
 		BF55E66A1DE164E700B0180F = {
 			isa = PBXGroup;
 			children = (
+				BF55E6941DE1872600B0180F /* batman.bmp */,
+				BF55E68C1DE1712300B0180F /* mainGame.cpp */,
+				BF55E68D1DE1712300B0180F /* mainGame.hpp */,
 				BF55E6751DE164E700B0180F /* trySDL */,
 				BF55E6741DE164E700B0180F /* Products */,
+				BF55E67F1DE1665E00B0180F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +89,20 @@
 				BF55E6761DE164E700B0180F /* main.cpp */,
 			);
 			path = trySDL;
+			sourceTree = "<group>";
+		};
+		BF55E67F1DE1665E00B0180F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF55E69B1DE2169700B0180F /* SDL2_ttf.framework */,
+				BF55E6991DE2168600B0180F /* SDL2_net.framework */,
+				BF55E6971DE2166200B0180F /* SDL2_mixer.framework */,
+				BF55E6951DE2164B00B0180F /* SDL2_image.framework */,
+				BF55E6891DE1701C00B0180F /* OpenGL.framework */,
+				BF55E6861DE16A1B00B0180F /* SDL2.framework */,
+				BF55E6801DE1665E00B0180F /* Cocoa.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF55E68E1DE1712300B0180F /* mainGame.cpp in Sources */,
 				BF55E6771DE164E700B0180F /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,6 +262,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = K85684732E;
+				FRAMEWORK_SEARCH_PATHS = (
+					/Library/Frameworks,
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -226,6 +274,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = K85684732E;
+				FRAMEWORK_SEARCH_PATHS = (
+					/Library/Frameworks,
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
