@@ -16,6 +16,7 @@
 		BF55E6981DE2166200B0180F /* SDL2_mixer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF55E6971DE2166200B0180F /* SDL2_mixer.framework */; };
 		BF55E69A1DE2168600B0180F /* SDL2_net.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF55E6991DE2168600B0180F /* SDL2_net.framework */; };
 		BF55E69C1DE2169700B0180F /* SDL2_ttf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF55E69B1DE2169700B0180F /* SDL2_ttf.framework */; };
+		BF55E6C41DE563C200B0180F /* sprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF55E6C21DE563C200B0180F /* sprite.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +44,8 @@
 		BF55E6971DE2166200B0180F /* SDL2_mixer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_mixer.framework; path = ../../../../Library/Frameworks/SDL2_mixer.framework; sourceTree = "<group>"; };
 		BF55E6991DE2168600B0180F /* SDL2_net.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_net.framework; path = ../../../../Library/Frameworks/SDL2_net.framework; sourceTree = "<group>"; };
 		BF55E69B1DE2169700B0180F /* SDL2_ttf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_ttf.framework; path = ../../../../Library/Frameworks/SDL2_ttf.framework; sourceTree = "<group>"; };
+		BF55E6C21DE563C200B0180F /* sprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sprite.cpp; sourceTree = "<group>"; };
+		BF55E6C31DE563C200B0180F /* sprite.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sprite.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +69,8 @@
 		BF55E66A1DE164E700B0180F = {
 			isa = PBXGroup;
 			children = (
+				BF55E6C21DE563C200B0180F /* sprite.cpp */,
+				BF55E6C31DE563C200B0180F /* sprite.hpp */,
 				BF55E6941DE1872600B0180F /* batman.bmp */,
 				BF55E68C1DE1712300B0180F /* mainGame.cpp */,
 				BF55E68D1DE1712300B0180F /* mainGame.hpp */,
@@ -165,6 +170,7 @@
 			files = (
 				BF55E68E1DE1712300B0180F /* mainGame.cpp in Sources */,
 				BF55E6771DE164E700B0180F /* main.cpp in Sources */,
+				BF55E6C41DE563C200B0180F /* sprite.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +307,7 @@
 				BF55E67C1DE164E700B0180F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

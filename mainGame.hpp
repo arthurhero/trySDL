@@ -10,7 +10,10 @@
 #include <stdio.h>
 
 #include <SDL2/SDL.h>
-#include <OpenGL/OpenGL.h>
+#include <OpenGL/gl.h>
+#include <OpenGL/glu.h>
+
+#include "sprite.hpp"
 
 enum class gameState{PLAY,EXIT};
 
@@ -31,12 +34,15 @@ private:
     void initSystems();
     void processInput();
     void gameLoop();
+    void drawGame();
     
     SDL_Window* _window;
     SDL_Surface* window_surface;
     SDL_Surface* image_surface;
     int _screenwidth;
     int _screenheight;
+    
+    Sprite _sprite;
     
     gameState _gameState;
     
