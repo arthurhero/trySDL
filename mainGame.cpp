@@ -8,6 +8,9 @@
 
 #include "mainGame.hpp"
 #include <iostream>
+#include <OpenGL/gl.h>
+#include <OpenGL/OpenGL.h>
+#include <OpenGL/gl3.h>
 
 
 mainGame::mainGame()
@@ -22,6 +25,9 @@ mainGame::mainGame()
 
 mainGame::~mainGame()
 {
+
+ //   CGLSetCurrentContext( NULL );
+ //   CGLDestroyContext( context );
     SDL_DestroyWindow(_window);
     SDL_FreeSurface(image_surface);
     SDL_Quit();
@@ -49,11 +55,51 @@ void mainGame::initSystems(){
     //SDL_UpdateWindowSurface(_window);
     
     SDL_GLContext glContext = SDL_GL_CreateContext(_window);
+    
+    
+    
     SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1.0);
+    
     glClearColor(1.0f, 0.0f, 1.0f, 1.0f);
+    
+/*
+    CGLPixelFormatAttribute attributes[5] = {
+        kCGLPFAAccelerated,   // no software rendering
+        kCGLPFAOpenGLProfile, // core profile with the version stated below
+        (CGLPixelFormatAttribute) kCGLOGLPVersion_3_2_Core,
+        (CGLPixelFormatAttribute) 0,
+        kCGLPFADoubleBuffer
+    };
+    
+    CGLPixelFormatObj pix;
+    CGLError errorCode;
+    GLint num; // stores the number of possible pixel formats
+    errorCode = CGLChoosePixelFormat( attributes, &pix, &num );
+    std::cout << errorCode <<std::endl;
+    // add error checking here
+    errorCode = CGLCreateContext( pix, NULL, &context ); // second parameter can be another context for object sharing
+    std::cout << errorCode <<std::endl;
+    // add error checking here
+    CGLDestroyPixelFormat( pix );
+    
+    errorCode = CGLSetCurrentContext( context );
+    std::cout << errorCode <<std::endl;
+    // add error checking here
+*/
+    
+    initShaders();
+
+}
+
+void mainGame::initShaders(){
+    
+    _colorProgram.compileShaders("colorCoding.vert", "colorCoding.frag");
+    _colorProgram.addAttribute("vertexPosition");
+    _colorProgram.linkShaders();
     
 
 }
+
 
 void mainGame::gameLoop(){
     while (_gameState != gameState::EXIT){
@@ -88,9 +134,15 @@ void mainGame::processInput(){
 void mainGame::drawGame(){
     glClearDepth(1.0);
     glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
+   
+    
+    _colorProgram.use();
     
     _sprite.draw();
-
+    
+    _colorProgram.unuse();
+    
+    
     SDL_GL_SwapWindow(_window);
 
 }

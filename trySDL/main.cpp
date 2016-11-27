@@ -13,6 +13,10 @@
 
 int main( int argc, char* args[] )
 {
+    std::string s = "aaa\naaa";
+    s+="\n";
+    s+="aaa";
+    std::cout << s << std::endl;
     mainGame mainGame;
     
     mainGame.run();

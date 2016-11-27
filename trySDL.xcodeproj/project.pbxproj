@@ -17,6 +17,7 @@
 		BF55E69A1DE2168600B0180F /* SDL2_net.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF55E6991DE2168600B0180F /* SDL2_net.framework */; };
 		BF55E69C1DE2169700B0180F /* SDL2_ttf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF55E69B1DE2169700B0180F /* SDL2_ttf.framework */; };
 		BF55E6C41DE563C200B0180F /* sprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF55E6C21DE563C200B0180F /* sprite.cpp */; };
+		BF55E6C91DE7D89500B0180F /* GLSLProgram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF55E6C71DE7D89500B0180F /* GLSLProgram.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -46,6 +47,10 @@
 		BF55E69B1DE2169700B0180F /* SDL2_ttf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_ttf.framework; path = ../../../../Library/Frameworks/SDL2_ttf.framework; sourceTree = "<group>"; };
 		BF55E6C21DE563C200B0180F /* sprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sprite.cpp; sourceTree = "<group>"; };
 		BF55E6C31DE563C200B0180F /* sprite.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sprite.hpp; sourceTree = "<group>"; };
+		BF55E6C71DE7D89500B0180F /* GLSLProgram.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GLSLProgram.cpp; sourceTree = "<group>"; };
+		BF55E6C81DE7D89500B0180F /* GLSLProgram.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GLSLProgram.hpp; sourceTree = "<group>"; };
+		BF55E6D01DEA5A8000B0180F /* colorCoding.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = colorCoding.frag; sourceTree = "<group>"; };
+		BF55E6D31DEA5DF900B0180F /* colorCoding.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = colorCoding.vert; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +74,10 @@
 		BF55E66A1DE164E700B0180F = {
 			isa = PBXGroup;
 			children = (
+				BF55E6D31DEA5DF900B0180F /* colorCoding.vert */,
+				BF55E6D01DEA5A8000B0180F /* colorCoding.frag */,
+				BF55E6C71DE7D89500B0180F /* GLSLProgram.cpp */,
+				BF55E6C81DE7D89500B0180F /* GLSLProgram.hpp */,
 				BF55E6C21DE563C200B0180F /* sprite.cpp */,
 				BF55E6C31DE563C200B0180F /* sprite.hpp */,
 				BF55E6941DE1872600B0180F /* batman.bmp */,
@@ -170,6 +179,7 @@
 			files = (
 				BF55E68E1DE1712300B0180F /* mainGame.cpp in Sources */,
 				BF55E6771DE164E700B0180F /* main.cpp in Sources */,
+				BF55E6C91DE7D89500B0180F /* GLSLProgram.cpp in Sources */,
 				BF55E6C41DE563C200B0180F /* sprite.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

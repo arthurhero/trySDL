@@ -44,12 +44,12 @@ void Sprite::init(float x, float y, float width, float height)
     
     //second triangle
     
-    vertexData[0]=x;
-    vertexData[1]=y;
-    vertexData[2]= x+width;
-    vertexData[3]=y;
-    vertexData[4]= x+width;
-    vertexData[5]= y+height;
+    vertexData[6]=x;
+    vertexData[7]=y;
+    vertexData[8]= x+width;
+    vertexData[9]=y;
+    vertexData[10]= x+width;
+    vertexData[11]= y+height;
     
     glBindBuffer(GL_ARRAY_BUFFER, _vboID);
     

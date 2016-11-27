@@ -12,8 +12,12 @@
 #include <SDL2/SDL.h>
 #include <OpenGL/gl.h>
 #include <OpenGL/glu.h>
+#include <OpenGL/glext.h>
+#include <OpenGL/OpenGL.h>
+#include <OpenGL/gl3.h>
 
 #include "sprite.hpp"
+#include "GLSLProgram.hpp"
 
 enum class gameState{PLAY,EXIT};
 
@@ -35,6 +39,7 @@ private:
     void processInput();
     void gameLoop();
     void drawGame();
+    void initShaders();
     
     SDL_Window* _window;
     SDL_Surface* window_surface;
@@ -42,9 +47,13 @@ private:
     int _screenwidth;
     int _screenheight;
     
+//    CGLContextObj context;
+    
     Sprite _sprite;
     
     gameState _gameState;
+    
+    GLSLProgram _colorProgram;
     
 };
 
