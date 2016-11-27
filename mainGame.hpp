@@ -18,6 +18,7 @@
 
 #include "sprite.hpp"
 #include "GLSLProgram.hpp"
+#include "GLTexture.h"
 
 enum class gameState{PLAY,EXIT};
 
@@ -50,6 +51,8 @@ private:
     float _time;
     
 //    CGLContextObj context;
+    
+    GLTexture _player;
     
     Sprite _sprite;
     

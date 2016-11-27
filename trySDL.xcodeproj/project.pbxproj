@@ -18,6 +18,9 @@
 		BF55E69C1DE2169700B0180F /* SDL2_ttf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF55E69B1DE2169700B0180F /* SDL2_ttf.framework */; };
 		BF55E6C41DE563C200B0180F /* sprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF55E6C21DE563C200B0180F /* sprite.cpp */; };
 		BF55E6C91DE7D89500B0180F /* GLSLProgram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF55E6C71DE7D89500B0180F /* GLSLProgram.cpp */; };
+		BF55E6D71DEAB25500B0180F /* IOManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF55E6D51DEAB25500B0180F /* IOManager.cpp */; };
+		BF55E6DA1DEABAFA00B0180F /* picoPNG.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF55E6D81DEABAFA00B0180F /* picoPNG.cpp */; };
+		BF55E6DE1DEABC6E00B0180F /* imageLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF55E6DC1DEABC6E00B0180F /* imageLoader.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -52,6 +55,14 @@
 		BF55E6D01DEA5A8000B0180F /* colorCoding.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = colorCoding.frag; sourceTree = "<group>"; };
 		BF55E6D31DEA5DF900B0180F /* colorCoding.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = colorCoding.vert; sourceTree = "<group>"; };
 		BF55E6D41DEA9AFA00B0180F /* Vertex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vertex.h; sourceTree = "<group>"; };
+		BF55E6D51DEAB25500B0180F /* IOManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IOManager.cpp; sourceTree = "<group>"; };
+		BF55E6D61DEAB25500B0180F /* IOManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = IOManager.hpp; sourceTree = "<group>"; };
+		BF55E6D81DEABAFA00B0180F /* picoPNG.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = picoPNG.cpp; sourceTree = "<group>"; };
+		BF55E6D91DEABAFA00B0180F /* picoPNG.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = picoPNG.hpp; sourceTree = "<group>"; };
+		BF55E6DB1DEABBA700B0180F /* GLTexture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLTexture.h; sourceTree = "<group>"; };
+		BF55E6DC1DEABC6E00B0180F /* imageLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imageLoader.cpp; sourceTree = "<group>"; };
+		BF55E6DD1DEABC6E00B0180F /* imageLoader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = imageLoader.hpp; sourceTree = "<group>"; };
+		BF55E6DF1DEAD60200B0180F /* RealMadrid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RealMadrid.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,10 +88,18 @@
 			children = (
 				BF55E6D31DEA5DF900B0180F /* colorCoding.vert */,
 				BF55E6D01DEA5A8000B0180F /* colorCoding.frag */,
+				BF55E6D61DEAB25500B0180F /* IOManager.hpp */,
+				BF55E6D51DEAB25500B0180F /* IOManager.cpp */,
+				BF55E6DB1DEABBA700B0180F /* GLTexture.h */,
+				BF55E6DC1DEABC6E00B0180F /* imageLoader.cpp */,
+				BF55E6DD1DEABC6E00B0180F /* imageLoader.hpp */,
+				BF55E6D81DEABAFA00B0180F /* picoPNG.cpp */,
+				BF55E6D91DEABAFA00B0180F /* picoPNG.hpp */,
 				BF55E6D41DEA9AFA00B0180F /* Vertex.h */,
 				BF55E6C71DE7D89500B0180F /* GLSLProgram.cpp */,
 				BF55E6C81DE7D89500B0180F /* GLSLProgram.hpp */,
 				BF55E6C21DE563C200B0180F /* sprite.cpp */,
+				BF55E6DF1DEAD60200B0180F /* RealMadrid.png */,
 				BF55E6C31DE563C200B0180F /* sprite.hpp */,
 				BF55E6941DE1872600B0180F /* batman.bmp */,
 				BF55E68C1DE1712300B0180F /* mainGame.cpp */,
@@ -181,7 +200,10 @@
 			files = (
 				BF55E68E1DE1712300B0180F /* mainGame.cpp in Sources */,
 				BF55E6771DE164E700B0180F /* main.cpp in Sources */,
+				BF55E6D71DEAB25500B0180F /* IOManager.cpp in Sources */,
+				BF55E6DE1DEABC6E00B0180F /* imageLoader.cpp in Sources */,
 				BF55E6C91DE7D89500B0180F /* GLSLProgram.cpp in Sources */,
+				BF55E6DA1DEABAFA00B0180F /* picoPNG.cpp in Sources */,
 				BF55E6C41DE563C200B0180F /* sprite.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

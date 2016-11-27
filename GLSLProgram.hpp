@@ -31,7 +31,7 @@ public:
     
     void unuse();
     
-    GLuint getUniformLocation (const std::string& attributeName);
+    GLint getUniformLocation (const std::string& attributeName);
     
 private:
     void compileShader (const std::string& filePath, GLuint& id);

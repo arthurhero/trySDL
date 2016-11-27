@@ -11,6 +11,7 @@
 #include <OpenGL/gl.h>
 #include <OpenGL/OpenGL.h>
 #include <OpenGL/gl3.h>
+#include "imageLoader.hpp"
 
 
 mainGame::mainGame()
@@ -39,6 +40,9 @@ void mainGame::run(){
     initSystems();
     
     _sprite.init(-1, -1, 2, 2);
+    
+    _player = imageLoader::loadPNG("RealMadrid2.png");
+    
     gameLoop();
 
 }
@@ -97,6 +101,7 @@ void mainGame::initShaders(){
     _colorProgram.compileShaders("colorCoding.vert", "colorCoding.frag");
     _colorProgram.addAttribute("vertexPosition");
     _colorProgram.addAttribute("vertexColor");
+    _colorProgram.addAttribute("vertexUV");
     _colorProgram.linkShaders();
     
 
@@ -141,10 +146,18 @@ void mainGame::drawGame(){
     
     _colorProgram.use();
     
+    glActiveTexture(GL_TEXTURE0);
+    glBindTexture(GL_TEXTURE_2D, _player.id);
+    
+    GLuint textureLocation = _colorProgram.getUniformLocation("mySampler");
+    glUniform1i(textureLocation, 0);
+    
     GLuint timeLocation = _colorProgram.getUniformLocation("time");
     glUniform1f(timeLocation, _time);
     
     _sprite.draw();
+    
+    glBindTexture(GL_TEXTURE_2D, 0);
     
     _colorProgram.unuse();
     

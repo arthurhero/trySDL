@@ -28,8 +28,8 @@ void GLSLProgram::addAttribute (const std::string& attibuteName){
     
 }
 
-GLuint GLSLProgram::getUniformLocation (const std::string& attributeName){
-    GLuint location = glGetUniformLocation(_programID, attributeName.c_str());
+GLint GLSLProgram::getUniformLocation (const std::string& attributeName){
+    GLint location = glGetUniformLocation(_programID, attributeName.c_str());
     if (location == GL_INVALID_VALUE){
         std::cout << "fail to locate" << std::endl;
     }
