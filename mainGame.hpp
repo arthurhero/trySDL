@@ -47,6 +47,8 @@ private:
     int _screenwidth;
     int _screenheight;
     
+    float _time;
+    
 //    CGLContextObj context;
     
     Sprite _sprite;

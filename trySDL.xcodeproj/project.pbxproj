@@ -51,6 +51,7 @@
 		BF55E6C81DE7D89500B0180F /* GLSLProgram.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GLSLProgram.hpp; sourceTree = "<group>"; };
 		BF55E6D01DEA5A8000B0180F /* colorCoding.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = colorCoding.frag; sourceTree = "<group>"; };
 		BF55E6D31DEA5DF900B0180F /* colorCoding.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = colorCoding.vert; sourceTree = "<group>"; };
+		BF55E6D41DEA9AFA00B0180F /* Vertex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vertex.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +77,7 @@
 			children = (
 				BF55E6D31DEA5DF900B0180F /* colorCoding.vert */,
 				BF55E6D01DEA5A8000B0180F /* colorCoding.frag */,
+				BF55E6D41DEA9AFA00B0180F /* Vertex.h */,
 				BF55E6C71DE7D89500B0180F /* GLSLProgram.cpp */,
 				BF55E6C81DE7D89500B0180F /* GLSLProgram.hpp */,
 				BF55E6C21DE563C200B0180F /* sprite.cpp */,

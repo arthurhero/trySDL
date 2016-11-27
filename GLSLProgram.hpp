@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include <string>
 #include <OpenGL/gl.h>
+#include <OpenGL/glu.h>
 
 
 class GLSLProgram
@@ -29,6 +30,8 @@ public:
     void use();
     
     void unuse();
+    
+    GLuint getUniformLocation (const std::string& attributeName);
     
 private:
     void compileShader (const std::string& filePath, GLuint& id);

@@ -15,6 +15,7 @@
 
 mainGame::mainGame()
 {
+    _time = 0.0;
     _window = nullptr;
     _screenwidth = 500;
     _screenheight = 500;
@@ -37,7 +38,7 @@ mainGame::~mainGame()
 void mainGame::run(){
     initSystems();
     
-    _sprite.init(-1, -1, 1, 1);
+    _sprite.init(-1, -1, 2, 2);
     gameLoop();
 
 }
@@ -45,7 +46,7 @@ void mainGame::run(){
 void mainGame::initSystems(){
     SDL_Init(SDL_INIT_EVERYTHING);
     
-    _window = SDL_CreateWindow("Game Engine", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, _screenwidth, _screenheight, SDL_WINDOW_OPENGL);
+    _window = SDL_CreateWindow("Game Engine", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, _screenwidth, _screenheight, SDL_WINDOW_OPENGL|SDL_WINDOW_RESIZABLE);
     
     //window_surface = SDL_GetWindowSurface(_window);
     //image_surface = SDL_LoadBMP("batman.bmp");
@@ -95,6 +96,7 @@ void mainGame::initShaders(){
     
     _colorProgram.compileShaders("colorCoding.vert", "colorCoding.frag");
     _colorProgram.addAttribute("vertexPosition");
+    _colorProgram.addAttribute("vertexColor");
     _colorProgram.linkShaders();
     
 
@@ -104,6 +106,7 @@ void mainGame::initShaders(){
 void mainGame::gameLoop(){
     while (_gameState != gameState::EXIT){
         processInput();
+        _time+=0.01;
         drawGame();
     }
 
@@ -137,6 +140,9 @@ void mainGame::drawGame(){
    
     
     _colorProgram.use();
+    
+    GLuint timeLocation = _colorProgram.getUniformLocation("time");
+    glUniform1f(timeLocation, _time);
     
     _sprite.draw();
     
