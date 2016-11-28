@@ -8,6 +8,8 @@
 #pragma once
 
 #include <stdio.h>
+#include <vector>
+#include <string>
 
 #include <SDL2/SDL.h>
 #include <OpenGL/gl.h>
@@ -18,7 +20,6 @@
 
 #include "sprite.hpp"
 #include "GLSLProgram.hpp"
-#include "GLTexture.h"
 
 enum class gameState{PLAY,EXIT};
 
@@ -52,13 +53,12 @@ private:
     
 //    CGLContextObj context;
     
-    GLTexture _player;
-    
-    Sprite _sprite;
     
     gameState _gameState;
     
     GLSLProgram _colorProgram;
+    
+    std::vector<Sprite*> _sprites;
     
 };
 

@@ -11,7 +11,6 @@
 #include <OpenGL/gl.h>
 #include <OpenGL/OpenGL.h>
 #include <OpenGL/gl3.h>
-#include "imageLoader.hpp"
 
 
 mainGame::mainGame()
@@ -39,9 +38,17 @@ mainGame::~mainGame()
 void mainGame::run(){
     initSystems();
     
-    _sprite.init(-1, -1, 2, 2);
+    _sprites.push_back(new Sprite());
+    _sprites.back()->init(-1, -1, 1, 1, "Sprites/RealMadrid2.png");
+    _sprites.push_back(new Sprite());
+    _sprites.back()->init(0, 0, 1, 1, "Sprites/RealMadrid2.png");
+    _sprites.push_back(new Sprite());
+    _sprites.back()->init(-1, 0, 1, 1, "Sprites/Barcelona.png");
+    _sprites.push_back(new Sprite());
+    _sprites.back()->init(0, -1, 1, 1, "Sprites/Barcelona.png");
     
-    _player = imageLoader::loadPNG("RealMadrid2.png");
+    
+    //_player = imageLoader::loadPNG("RealMadrid2.png");
     
     gameLoop();
 
@@ -147,7 +154,6 @@ void mainGame::drawGame(){
     _colorProgram.use();
     
     glActiveTexture(GL_TEXTURE0);
-    glBindTexture(GL_TEXTURE_2D, _player.id);
     
     GLuint textureLocation = _colorProgram.getUniformLocation("mySampler");
     glUniform1i(textureLocation, 0);
@@ -155,7 +161,11 @@ void mainGame::drawGame(){
     GLuint timeLocation = _colorProgram.getUniformLocation("time");
     glUniform1f(timeLocation, _time);
     
-    _sprite.draw();
+    for(int i=0; i<_sprites.size();i++){
+        _sprites[i]->draw();
+    
+    
+    }
     
     glBindTexture(GL_TEXTURE_2D, 0);
     
